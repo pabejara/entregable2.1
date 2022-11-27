@@ -19,14 +19,12 @@
     padding-top: 30px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-
 }
 
 .card__header,
 .card__footer,
 .card__temp {
     grid-column: span 2;
-
 }
 
 .card__title {
