@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import WeatherCard from './components/WeatherCard'
 
 import './App.css'
+import Loading from './components/Loading'
 
 function App() {
 
@@ -36,13 +37,17 @@ function App() {
     }
   }, [coords])
 
-
   return (
     <div className="App">
-      <WeatherCard
-        weather={weather}
-        temp={temp}
-      />
+      {
+        weather ?
+          <WeatherCard
+            weather={weather}
+            temp={temp}
+          />
+          :
+          <Loading  />
+      }
     </div>
   )
 }

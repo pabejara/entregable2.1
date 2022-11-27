@@ -16,14 +16,6 @@ const WeatherCard = ({ weather, temp }) => {
             <section className='card__icon-container' >
                 <img className='card__icon' src={weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
 
-                <h3 className="card__temp">
-                    {
-                        isCelsius ?
-                            `${temp?.celsius} ºC`
-                            :
-                            `${temp?.farenheit} ºF`
-                    }
-                </h3>
             </section>
 
             <section className='card__info'  >
@@ -34,6 +26,14 @@ const WeatherCard = ({ weather, temp }) => {
                     <li className='card__item'> <span>Pressure </span> {weather?.main.pressure} hPa</li>
                 </ul>
             </section>
+            <h3 className="card__temp">
+                    {
+                        isCelsius ?
+                            `${temp?.celsius} ºC`
+                            :
+                            `${temp?.farenheit} ºF`
+                    }
+                </h3>
             <footer className='card__footer' >
                 <button onClick={handleClick} className="card__btn">Change to {isCelsius ? 'ºF' : 'ºC'}</button>
             </footer>
