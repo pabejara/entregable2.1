@@ -7,13 +7,13 @@
     background-image: url(./images/unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover; 
 }
+
 .card {
     width: 100%;
     max-width: 400px;
-    background-color: rgb(209, 106, 106);
+    background-color: rgb(209, 106, 106, 0.667);
     padding: 20px;
     border-radius: 12px;
     padding-top: 30px;
@@ -32,6 +32,7 @@
 .card__title {
     text-align: center;
     font-size: 2.2rem;
+    grid-column: span 2;
 
 }
 
